@@ -15,9 +15,9 @@ class List extends React.Component {
   }
   static defaultProps = {
     children: <p>I can do all the things!!!</p>,
-    animals: <column className={styles.title}>Animals</column>
-    plants: <column className={styles.title}>Plants</column>
-    minerals: <column className={styles.title}>Minerals</column>
+    animals: 'Animals',
+    plants: '<column className={styles.title}>Plants</column>',
+    minerals: '<column className={styles.title}>Minerals</column>',
   }
   render() {
     return (
@@ -27,12 +27,10 @@ class List extends React.Component {
           {this.props.children}
         </div>
         <div className={styles.columns}>
-          <Column>
-           {this.props.animals}
-          {this.props.plants}
-          {this.props.minerals}
-          
-          </Column>
+          <Column name={this.props.animals}/>
+          <Column name={this.props.plants}/>
+          <Column name={this.props.minerals}/>
+            
         </div>
         
 

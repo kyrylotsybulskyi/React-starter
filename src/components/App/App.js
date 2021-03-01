@@ -8,7 +8,7 @@ class App extends React.Component {
     title: PropTypes.node.isRequired,
     subtitle: PropTypes.node,
     children: PropTypes.node,
-    image: PropTypes.text,
+    image: PropTypes.string,
   }
   static defaultProps = {
     title: 'My first React app',
@@ -20,7 +20,7 @@ class App extends React.Component {
         <main className={styles.component}>
           <h1 className={styles.title}>{this.props.title}</h1>
           <h2 className={styles.subtitle}>Hello world!</h2>
-          <List title={['Things to do', <sup key='1'>soon!</sup>]} image={this.proops.image} >
+          <List title={['Things to do', <sup key='1'>soon!</sup>]} image={this.props.image} >
             <div className={styles.title}>
               {this.props.children}
               

@@ -8,12 +8,12 @@ class Column extends React.Component {
     name: PropTypes.string,
   }
   
-  }
+  
   render() {
     return (
       <section className={styles.component}>
         <h3 className={styles.title}>
-          {props.name}
+          {this.props.name}
           </h3>
 
       </section>

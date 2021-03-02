@@ -14,10 +14,10 @@ class List extends React.Component {
     minerals: PropTypes.string,
   }
   static defaultProps = {
-    children: <p>I can do all the things!!!</p>,
+    children: <p>Interesting things I want to check out!</p>,
     animals: 'Animals',
-    plants: '<column className={styles.title}>Plants</column>',
-    minerals: '<column className={styles.title}>Minerals</column>',
+    plants: 'Plants',
+    minerals: 'Minerals',
   }
   render() {
     return (

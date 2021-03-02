@@ -1,14 +1,14 @@
 import React from 'react';
 import styles from './Column.scss';
 import PropTypes from 'prop-types';
-
+import {settings} from '../../data/dataStore';
+import ReactHtmlParser from 'react-html-parser';
 
 class Column extends React.Component {
-  static PropTypes = {
+  static propTypes = {
     name: PropTypes.string,
+    
   }
-  
-  
   render() {
     return (
       <section className={styles.component}>

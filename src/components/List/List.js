@@ -7,19 +7,18 @@ import {settings} from '../../data/dataStore';
 import ReactHtmlParser from 'react-html-parser';
 
 class List extends React.Component {
+  state = {
+    columns: this.props.columns || [],
+  }
   static propTypes = {
     title: PropTypes.node.isRequired,    
     imageText: PropTypes.string,
-    animals: PropTypes.string,
-    plants: PropTypes.string,
-    minerals: PropTypes.string,
+    
     description: PropTypes.node,
     columns: PropTypes.array,
   }
   static defaultProps = {    
-    animals: 'Animals',
-    plants: 'Plants',
-    minerals: 'Minerals',
+    
     description: settings.defaultListDescription,
   }
   render() {
@@ -30,9 +29,10 @@ class List extends React.Component {
           {ReactHtmlParser(this.props.description)}
         </div>
         <div className={styles.columns}>
-          <Column name={this.props.animals}/>
-          <Column name={this.props.plants}/>
-          <Column name={this.props.minerals}/>
+          
+          {this.state.columns.map(({key, ...columnProps}) => (
+            <Column key={key} {...columnProps} />
+          ))}
             
         </div>
         

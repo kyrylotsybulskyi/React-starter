@@ -13,7 +13,7 @@ class App extends React.Component {
   }
   static defaultProps = {
     title: 'My first React app',
-    image: <img className={styles.image} src="https://i.postimg.cc/MpVBYK1P/space.png" alt="cosmos" />,
+    image: "https://i.postimg.cc/MpVBYK1P/space.png",
   }
   render() {
     return (

@@ -15,11 +15,11 @@ class Card extends React.Component {
         <h3 className={styles.title}>
           {this.props.title}
           
-          </h3>
+        </h3>
           
       </section>
 
-    )
+    );
   }
 }
 

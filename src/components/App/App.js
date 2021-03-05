@@ -1,12 +1,12 @@
 import React from 'react';
 import styles from './App.scss';
-import List from '../List/List.js';
+//import List from '../List/List.js';
 import PropTypes from 'prop-types';
-import { pageContents, listData } from '../../data/dataStore';
+//import { pageContents, listData } from '../../data/dataStore';
 
 class App extends React.Component {
   static propTypes = {
-    title: PropTypes.node.isRequired,
+    title: PropTypes.node,
     subtitle: PropTypes.node,
     children: PropTypes.node,
     image: PropTypes.string,
@@ -16,12 +16,15 @@ class App extends React.Component {
     image: 'https://i.postimg.cc/MpVBYK1P/space.png',
   }
   render() {
+    const {title, subtitle} = this.props;
     return (
       <div id="app">
         <main className={styles.component}>
-          <h1 className={styles.title}>{pageContents.title}</h1>
-          <h2 className={styles.subtitle}>{pageContents.subtitle}</h2>
+          <h1 className={styles.title}>{styles.title}</h1>
+          <h2 className={styles.subtitle}>{styles.subtitle}</h2>
+          {/*
           <List {...listData} />
+          */}
         </main>
       </div>
     );

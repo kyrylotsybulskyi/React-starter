@@ -1,10 +1,9 @@
 import { connect } from 'react-redux';
-import App from './App';
+import List from './List'; // <List id="list-2" image="" description="" />
 
-const mapStateToProps = state => ({
-  title: state.app.title,
-  subtitle: state.app.subtitle,
-  lists: state.lists,
+export const getColumnForList = ({columns}, listId) => columns.filter(column => column.listId == listId);
+const mapStateToProps = (state, props) => ({
+  columns: getColumnForList(state, props.id),
 });
 
-export default connect(mapStateToProps)(App);
+export default connect(mapStateToProps)(List); // <List id="" image="" description="" columns=[]/>

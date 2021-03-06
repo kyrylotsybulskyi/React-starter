@@ -9,6 +9,7 @@ const baseConfig = () => ({
     path: path.join(__dirname, 'dist'),
     filename: 'scripts_bundle.js',
   },
+  devtool: 'source-map',
   module: {
     rules: [
       {
@@ -23,6 +24,7 @@ const baseConfig = () => ({
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html',
+      
     }),
   ],
 });

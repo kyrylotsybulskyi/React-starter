@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './Column.scss';
 import Card from '../Card/Card.js';
 import PropTypes from 'prop-types';
-import { settings } from '../../data/dataStore';
+//import { settings } from '../../data/dataStore';
 //import Creator from '../Creator/Creator.js';
 import Icon from '../Icon/Icon.js';
 
@@ -30,8 +30,8 @@ class Column extends React.Component {
         </h3>
 
         <div className={styles.card}>
-          {cards.map(card => (
-            <Card key={card.id} {...card} />
+          {cards.map(cardData => (
+            <Card key={cardData.id} {...cardData} />
           ))}
         </div>
         {/*

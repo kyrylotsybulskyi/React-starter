@@ -34,9 +34,10 @@ class List extends React.Component {
         </div>
 
         <div className={styles.columns}>
-
-          {columns.map(columnData => (
-            <Column key={columnData.id} {...columnData} />
+        {console.log('this.props: ',this.props)};
+        {console.log('columns: ',columns)};
+          {columns.map(listData => (
+            <Column key={listData.id} {...listData} />
           ))}
 
         </div>

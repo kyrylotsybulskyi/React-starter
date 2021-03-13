@@ -12,4 +12,4 @@ const mapDispatchToProps = (dispatch, props) => ({
     title,
   })),
 });
-export default connect(mapStateToProps)(Column); // <List id="" image="" description="" columns=[]/>
+export default connect(mapStateToProps, mapDispatchToProps)(Column); // <List id="" image="" description="" columns=[]/>

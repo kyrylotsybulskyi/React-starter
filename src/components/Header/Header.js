@@ -1,8 +1,9 @@
 import React from 'react';
 import { NavLink, Link } from 'react-router-dom';
-import styles from '../Header.scss';
+import styles from '../Header/Header.scss';
 import Container from '../Container/Container';
 import Icon from '../Icon/Icon';
+import {settings} from '../../data/dataStore.js';
 
 
 
@@ -14,7 +15,7 @@ class Header extends React.Component {
         <Container>
           <div className={styles.wrapper}>
             <Link to='/' className={styles.logo}>
-              <Icon name={this.props.icon} />
+              <Icon name={settings.defaultHeaderIcon} />
             </Link>
             <nav>
               <NavLink exact to='/' activeClassName='active'>Home</NavLink>

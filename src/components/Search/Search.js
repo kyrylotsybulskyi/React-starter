@@ -8,7 +8,7 @@ import Container from '../Container/Container.js';
 import {withRouter} from "react-router";
 
 class Search extends React.Component {
-  static propTypes = {
+  static pnpmropTypes = {
     text: PropTypes.string,
     searchString: PropTypes.string,
     changeSearchString: PropTypes.func,
@@ -28,7 +28,7 @@ class Search extends React.Component {
     this.setState({
       value: event.target.value,
       visibleButtons: event.target.value.length > 0,
-    });
+    });    
   }
 
   handleOK() {

@@ -22,6 +22,7 @@ export const createAction_changeSearchString = payload => ({ payload, type: CHAN
 // reducer
 export default function reducer(statePart = '', action = {}) {
   switch (action.type) {
+    //debugger;
     case CHANGE_SEARCHSTRING:
       return action.payload;
     default:
